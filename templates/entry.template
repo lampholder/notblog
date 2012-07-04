@@ -1,0 +1,13 @@
+{{! variable fields: entry_date, filename, content, twitter_id, hashtag, is_last }}
+<div class="entry">
+  <h1 class="entryTitle">{{entry_date}} - <a href="http://b.3cu.eu/{{filename}}">{{filename}}</a></h1>
+  <div class="entryBody">
+{{{content}}}
+  </div>
+  <div class="entryControls">
+    <span class='twitter'>twitter</span>: <a href="http://twitter.com/intent/tweet?text=@{{twitter_id}}+ur+opinions+go+here&hashtags={{hashtag}}">say things</a> <a href="http://twitter.com/#!/search/%23{{hashtag}}">read things</a>
+  </div>
+</div>
+{{^is_last}}
+<hr>
+{{/is_last}}
